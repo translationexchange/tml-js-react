@@ -6,5 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ian McDaniel",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.4.1"
+  }
 }

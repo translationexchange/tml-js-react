@@ -1,10 +1,11 @@
-import React from 'react';
+var React = require('react');
 
-export default {
+module.exports = {
   
-  tr(...args) {
+  tr() {
     if(window.tr) {
-      return React.createElement("div", {
+      var args = Array.prototype.slice.call(arguments);
+      return React.createElement("span", {
         dangerouslySetInnerHTML: {
           __html: window.tr.apply(this, args)
         } 
@@ -12,9 +13,10 @@ export default {
     }
   },
 
-  trl(...args){
+  trl() {
     if(window.trl) {
-      window.trl.apply(this, args);
+      var args = Array.prototype.slice.call(arguments);
+      return window.trl.apply(this, args);
     }
   }
 
