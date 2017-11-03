@@ -17,6 +17,7 @@ class YourComponent extends React.Component {
   render() {
     return (
       <div>
+        <h1>{ tr('Welcome {username}', {username: 'Jane'}) }</h1>
         <input placeholder={ trl('Enter your email') } />
         <button>{ tr('Get Started') }</button>
       </div>
